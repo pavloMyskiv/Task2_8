@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&family=Ubuntu:wght@400;700&display=swap');
+
+@import './modules/variables';
+@import './modules/mixins';
+@import './modules/layout';
+@import './modules/header';
+@import './modules/active_shoping_cart';
+@import './modules/product_cards';
+.home_screen {
+  background: url(../image/home-img.jpg) no-repeat 50% 50% / cover;
+  width: 100vw;
+  height: 100vh;
+  color: $main-background;
+  display: flex;
+  align-items: center;
+  .home_screen_content {
+    flex: 1 1 auto;
+    h1 {
+      font-family: 'Mogra', cursive;
+      font-size: 3em;
+      @include for-size(phone) {
+        font-size: 2em;
+      }
+    }
+    h2 {
+      font-size: 1.5em;
+      line-height: 1.5em;
+      font-weight: 700;
+      @include for-size(phone) {
+        font-size: 1em;
+      }
+    }
+    a {
+      padding: 5px;
+      font-size: 1em;
+      color: inherit;
+      background-color: inherit;
+      border: 1px solid $main-background;
+      border-radius: 5px;
+      @include button;
+    }
+  }
+}
+
+.featured {
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    text-align: center;
+    font-size: 1.5em;
+    span {
+      color: $second-color;
+    }
+  }
+
+  a {
+    padding: 5px;
+    font-size: 1.2em;
+    color: $main-background;
+    background-color: $second-color;
+    border: 2px solid $main-color;
+    border-radius: 5px;
+    @include button;
+  }
+}

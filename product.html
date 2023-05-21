@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garden Store</title>
+    <link rel="stylesheet" href="./css/product.css" />
+    <link rel="icon" href="./image/icons/images.png" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="container header">
+        <nav class="header_buttons">
+          <a href="./home.html" class="header_button">Home</a>
+          <a href="./product.html" class="header_button">Products</a>
+          <a href="./about.html" class="header_button">About</a>
+        </nav>
+        <div class="header_logo">Garden Store</div>
+        <div class="shoping_cart">
+          <p></p>
+        </div>
+      </header>
+      <div class="site_nav">
+        <h2 class="container">Home / Products</h2>
+      </div>
+      <section class="container">
+        <aside
+          class="side_bar"
+          oninput="result.value=parseInt(inputPrise.value)"
+        >
+          <input class="search" type="search" placeholder="Search..." />
+          <ul>
+            Company:
+            <li class="manufacture">Garden Furniture Inc.</li>
+            <li class="manufacture">Patio Living Inc.</li>
+            <li class="manufacture">Outdoor Comfort Co.</li>
+          </ul>
+          <input
+            class="inputPrise"
+            id="inputPrise"
+            type="range"
+            min="0"
+            max="1000"
+            step="25"
+            value="0"
+          />
+          <p>Value : $<output id="result" for="inputPrise">0</output></p>
+        </aside>
+        <div class="product_cards"></div>
+      </section>
+    </div>
+    <script type="module" src="./js/product.js"></script>
+  </body>
+</html>

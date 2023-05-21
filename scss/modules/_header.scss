@@ -1,0 +1,70 @@
+.header {
+  position: sticky;
+  top: 0;
+  margin-top: 30px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main-background;
+  z-index: 1;
+  .header_buttons {
+    list-style: none;
+    display: flex;
+    .header_button {
+      margin-left: 1em;
+      color: inherit;
+      font-size: 20px;
+      text-decoration: none;
+      background-color: inherit;
+      border: none;
+      @include button;
+      @include for-size(phone) {
+        margin-left: 0.5em;
+      }
+    }
+  }
+  .header_logo {
+    margin: 0 auto;
+    font-family: 'Mogra', cursive;
+    font-size: 32px;
+    text-align: center;
+    @include for-size(tablet-landscape) {
+      order: 3;
+      min-width: 100%;
+    }
+  }
+  .shoping_cart {
+    margin: 5px;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    box-shadow: 0 0 3px $main-color;
+    background: $main-background url(../../image/icons/shopping-cart.svg)
+      no-repeat 50% 50% / 70%;
+    @include button;
+    p {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $main-background;
+      text-align: center;
+      width: 1.1em;
+      height: 1.1em;
+      background-color: $second-color;
+      border-radius: 50%;
+    }
+  }
+}
+.header_white {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  color: $main-background;
+  background-color: inherit;
+}

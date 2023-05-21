@@ -1,0 +1,102 @@
+.active_shoping_cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 5px;  
+  width: 320px;
+  height: 100vh;
+  background: $second_background;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  .close {
+    flex-shrink: 0;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(../image/icons/close.svg) no-repeat 50% 50% / contain;
+    @include button;
+  }
+  h2 {
+    font-family: 'Mogra', cursive;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-align: center;
+  }
+  .cart_items {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+    .cart_item {
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $main_color;
+      img {
+        width: 30%;
+      }
+      .item_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        h4 {
+          text-align: center;
+        }
+        button {
+          padding: 5px;
+          height: 2em;
+          color: $main_background;
+          background: $second_color;
+          border-radius: 5px;
+          @include button;
+        }
+      }
+      .item_count {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .arrow_up {
+          flex-shrink: 0;
+          width: 1em;
+          height: 1em;
+          background: url(../image/icons/arrow-up.svg) no-repeat 50% 50% /
+            contain;
+          @include button;
+        }
+
+        .arrow_down {
+          flex-shrink: 0;
+          width: 1em;
+          height: 1em;
+          background: url(../image/icons/arrow-down.svg) no-repeat 50% 50% /
+            contain;
+          @include button;
+        }
+      }
+    }
+  }
+  .total {
+    font-family: 'Mogra', cursive;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 2em;
+  }
+  .checkout {
+    padding: 5px;
+    color: $main_background;
+    font-size: 1.2em;
+    background: $second_color;
+    border-radius: 5px;
+    @include button;
+  }
+}
+.block {
+  height: 100vh;
+  filter: blur(2px);
+  pointer-events: none;
+}
