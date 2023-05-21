@@ -10,9 +10,8 @@ const createProductHTML = (product) => {
   return productHTML;
 };
 export const renderProductCards = (products) => {
-  let resultHTML = '';
-  products.forEach((product) => {
-    resultHTML = resultHTML + createProductHTML(product);
-  });
+  let resultHTML = products
+    .map((product) => createProductHTML(product))
+    .join('');
   productCards.innerHTML = resultHTML;
 };
