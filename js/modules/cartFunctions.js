@@ -1,12 +1,13 @@
+/** @format */
+
 import { shopingCartQuantity } from './cart.js';
 
 const totalChange = (productData, cart) => {
   const totalValue = document.querySelector('.total');
-  let total = 0;
-  cart.forEach((item) => {
-    const cartItem = productData.find((product) => item.id === product.id);
-    total = total + cartItem.price * item.quantity;
-  });
+  let total = cart.reduce((total, cartItem,) => {
+    const product = productData.find((product) => cartItem.id === product.id);
+    return total + product.price * cartItem.quantity;
+  },0);
   totalValue.textContent = `Total: $${total}`;
 };
 

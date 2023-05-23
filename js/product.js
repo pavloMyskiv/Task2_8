@@ -23,7 +23,7 @@ search.addEventListener('keydown', (event) => {
     const filteredProducts = productData.filter(
       (product) => search.value == product.name
     );
-    if (filteredProducts[0]) {
+    if (filteredProducts.length) {
       renderProductCards(filteredProducts);
     } else {
       renderProductCards(productData);
@@ -37,7 +37,7 @@ price.addEventListener('keydown', (event) => {
     const filteredProducts = productData.filter(
       (product) => price.value == product.price
     );
-    if (filteredProducts[0]) {
+    if (filteredProducts.length) {
       renderProductCards(filteredProducts);
     } else {
       renderProductCards(productData);
