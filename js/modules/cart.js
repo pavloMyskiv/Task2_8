@@ -1,4 +1,9 @@
-import { closeCart, quantityChange, removeCartItem, checkOut } from './cartFunctions.js';
+import {
+  closeCart,
+  quantityChange,
+  removeCartItem,
+  checkOut,
+} from './cartFunctions.js';
 
 const cartIcon = document.querySelector('.shoping_cart');
 const wrapper = document.querySelector('.wrapper');
@@ -24,9 +29,9 @@ const createItemHTML = (cartItem, item) => {
        <button data-item-id="${cartItem.id}"  class="remove_button">remove</button>
       </div>
       <div class="item_count">
-        <div data-item-id="${cartItem.id}" class="arrow_up quantity_button"></div>
+        <div data-item-id="${cartItem.id}" data-button-action="plus" class="arrow_up quantity_button"></div>
         <p class="counter">${item.quantity}</p>
-        <div data-item-id="${cartItem.id}" class="arrow_down quantity_button"></div>
+        <div data-item-id="${cartItem.id}" data-button-action="minus" class="arrow_down quantity_button"></div>
       </div>
   </div>`;
 };
@@ -56,5 +61,5 @@ export const showCart = (productData) => {
   closeCart(wrapper);
   quantityChange(productData, cart);
   removeCartItem(productData, cart);
-  checkOut(productData, cart)
+  checkOut(productData, cart);
 };

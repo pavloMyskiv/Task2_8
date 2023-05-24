@@ -1,13 +1,11 @@
-/** @format */
-
 import { shopingCartQuantity } from './cart.js';
 
 const totalChange = (productData, cart) => {
   const totalValue = document.querySelector('.total');
-  let total = cart.reduce((total, cartItem,) => {
+  let total = cart.reduce((total, cartItem) => {
     const product = productData.find((product) => cartItem.id === product.id);
     return total + product.price * cartItem.quantity;
-  },0);
+  }, 0);
   totalValue.textContent = `Total: $${total}`;
 };
 
@@ -23,9 +21,9 @@ export const quantityChange = (productData, cart) => {
 
       let cartItem = cart.find((item) => item.id == button.dataset.itemId);
 
-      if (button.classList.contains('arrow_up')) {
+      if (button.dataset.buttonAction == 'plus') {
         cartItem.quantity++;
-      } else if (button.classList.contains('arrow_down')) {
+      } else if (button.dataset.buttonAction == 'minus') {
         cartItem.quantity--;
       }
 

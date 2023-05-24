@@ -1,11 +1,10 @@
-import { getData } from './modules/getData.js';
 import { renderProductCards } from './modules/renderProductCards.js';
 import { addProductToCart } from './modules/addProductToCart.js';
 import { shopingCartQuantity, showCart } from './modules/cart.js';
 
 const cartIcon = document.querySelector('.shoping_cart');
 
-let productData = [];
+const productData = JSON.parse(localStorage.getItem('products'));
 
 const manufactures = document.querySelectorAll('.manufacture');
 for (let manufacture of manufactures) {
@@ -45,14 +44,10 @@ price.addEventListener('keydown', (event) => {
   }
 });
 
-async function renderProducts() {
-  productData = await getData();
-  renderProductCards(productData);
-}
-
 cartIcon.addEventListener('click', () => {
   showCart(productData);
 });
-renderProducts();
+
+renderProductCards(productData);
 shopingCartQuantity();
 addProductToCart();

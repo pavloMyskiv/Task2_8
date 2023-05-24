@@ -1,3 +1,5 @@
+/** @format */
+
 import { getData } from './modules/getData.js';
 import { renderProductCards } from './modules/renderProductCards.js';
 import { addProductToCart } from './modules/addProductToCart.js';
@@ -21,10 +23,10 @@ const getRandomProduct = (productData) => {
 
 async function renderRandomProducts() {
   productData = await getData();
+  window.products = productData;
 
   renderProductCards(getRandomProduct(productData));
 }
-
 
 cartIcon.addEventListener('click', () => {
   showCart(productData);
@@ -33,3 +35,4 @@ cartIcon.addEventListener('click', () => {
 renderRandomProducts();
 addProductToCart();
 shopingCartQuantity();
+window.products = 123;
