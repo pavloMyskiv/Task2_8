@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&family=Ubuntu:wght@400;700&display=swap');
+
+@import './modules/variables';
+@import './modules/mixins';
+@import './modules/layout';
+@import './modules/header';
+@import './modules/site_nav.scss';
+@import './modules/active_shoping_cart';
+
+.our_history {
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    font-size: 1.5em;
+    text-align: center;
+    font-size: 1.5em;
+    span {
+      color: $second-color;
+    }
+  }
+  p {
+    margin-top: 2em;
+    max-width: 600px;
+  }
+}

@@ -1,0 +1,7 @@
+.site_nav {
+  padding: 2em 5px;
+  background-color: $second-background;
+  @include for-size(tablet-portrait) {
+    padding: 1em 5px;
+  }
+}

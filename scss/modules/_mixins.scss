@@ -1,0 +1,29 @@
+@mixin button {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.05);
+      text-decoration: underline;
+    }
+  }
+  @media (hover: none) {
+    text-decoration: underline;
+  }
+}
+@mixin for-size($size) {
+  @if $size == phone {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+}

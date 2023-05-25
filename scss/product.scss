@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&family=Ubuntu:wght@400;700&display=swap');
+
+@import './modules/variables';
+@import './modules/mixins';
+@import './modules/layout';
+@import './modules/header';
+@import './modules/site_nav.scss';
+@import './modules/active_shoping_cart';
+@import './modules/side_bar';
+@import './modules/product_cards';
+
+section {
+  position: relative;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
