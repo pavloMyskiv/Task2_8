@@ -1,0 +1,86 @@
+[
+  {
+    "id": "0",
+    "name": "Oasis Garden Swing",
+    "price": 200,
+    "image": "./data/product-img/image1.jpg",
+    "manufacturer": "Garden Furniture Inc."
+  },
+  {
+    "id": "1",
+    "name": "Barcelona Garden Table",
+    "price": 250,
+    "image": "./data/product-img/image2.jpg",
+    "manufacturer": "Patio Living Inc."
+  },
+  {
+    "id": "2",
+    "name": "Park Benches",
+    "price": 150,
+    "image": "./data/product-img/image3.jpg",
+    "manufacturer": "Outdoor Comfort Co."
+  },
+  {
+    "id": "3",
+    "name": "Los Angeles Garden Furniture Set",
+    "price": 700,
+    "image": "./data/product-img/image4.jpg",
+    "manufacturer": "Garden Furniture Inc."
+  },
+  {
+    "id": "4",
+    "name": "Tahoe Garden Bed",
+    "price": 300,
+    "image": "./data/product-img/image5.jpg",
+    "manufacturer": "Outdoor Comfort Co."
+  },
+  {
+    "id": "5",
+    "name": "Palm Springs Sun Lounger",
+    "price": 175,
+    "image": "./data/product-img/image6.jpg",
+    "manufacturer": "Patio Living Inc."
+  },
+  {
+    "id": "6",
+    "name": "Santa Fe Garden Chair",
+    "price": 100,
+    "image": "./data/product-img/image7.jpg",
+    "manufacturer": "Outdoor Comfort Co."
+  },
+  {
+    "id": "7",
+    "name": "Beverly Hills Sun Lounger",
+    "price": 225,
+    "image": "./data/product-img/image8.jpg",
+    "manufacturer": "Garden Furniture Inc."
+  },
+  {
+    "id": "8",
+    "name": "Monte Carlo Garden Table",
+    "price": 350,
+    "image": "./data/product-img/image9.jpg",
+    "manufacturer": "Patio Living Inc."
+  },
+  {
+    "id": "9",
+    "name": "Rancho Wood-fired Barbecue",
+    "price": 400,
+    "image": "./data/product-img/image10.jpg",
+    "manufacturer": "Garden Furniture Inc."
+  },
+  {
+    "id": "10",
+    "name": "Santa Fe Garden Hammock",
+    "price": 120,
+    "image": "./data/product-img/image11.jpg",
+    "manufacturer": "Outdoor Comfort Co."
+  },
+  {
+    "id": "11",
+    "name": "Miami Garden Table",
+    "price": 300,
+    "image": "./data/product-img/image12.jpg",
+    "manufacturer": "Patio Living Inc."
+  }
+]
